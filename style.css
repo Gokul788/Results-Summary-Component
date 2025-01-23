@@ -173,6 +173,15 @@ button{
     font-weight: 500;
     margin-top: 2rem;
 }
+button:hover{
+    background: rgb(120, 87, 255);
+    background: linear-gradient(
+      180deg,
+      rgba(120, 87, 255, 1) 0%,
+      rgba(46, 43, 233, 1) 100%
+    );
+    color: white;
+}
 
 /* Media quary */
 
@@ -209,7 +218,7 @@ button{
     .container{
         width: 800px;
     }
-} {
+} 
     
-}
+
     

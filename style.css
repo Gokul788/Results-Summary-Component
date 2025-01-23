@@ -1,0 +1,215 @@
+/* Import Font */
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+/* Variables */
+
+:root {
+  --PRIMARYFONT: "Hanken Grotesk", serif;
+  --PRIMARYCOLOR1: hsl(0, 100%, 67%);
+  --PRIMARYCOLOR2: hsl(39, 100%, 56%);
+  --PRIMARYCOLOR3: hsl(166, 100%, 37%);
+  --PRIMARYCOLOR4: hsl(234, 85%, 45%);
+  --GREDIENTSCOLOR1: linear-gradient(
+    227deg,
+    rgba(120, 87, 255, 1) 0%,
+    rgba(46, 43, 233, 1) 100%
+  );
+  --GREDIENTSCOLOR2: linear-gradient(
+    227deg,
+    rgba(78, 33, 202, 1) 0%,
+    rgba(36, 33, 202, 1) 100%
+  );
+  --SECONDARYCOLOR: rgba(255, 255, 255, 0.63);
+}
+body{
+   
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    
+    color: white;
+    
+  
+}
+ /* Result_part Style */
+
+.Result_part {
+  width: 100%;
+  background: rgb(120, 87, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(120, 87, 255, 1) 0%,
+    rgba(46, 43, 233, 1) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 3rem 3rem 3rem;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  font-family: var(--PRIMARYFONT);
+  z-index: 2;
+  position: absolute;
+
+  
+}
+.head_part {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.head_part > p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--SECONDARYCOLOR);
+}
+.score_part {
+background: rgba(78, 33, 202, 0.63);
+ background: linear-gradient(180deg, rgba(78, 33, 202, 0.534) 17%, rgba(36, 33, 202, 0.685) 83%);
+  width: 120%;
+  padding: 1.5rem;
+  border-radius: 50%;
+  text-align: center;
+}
+.score_part > h1{
+    color: white;
+    font-size: 4rem;
+}
+.score_part > p{
+    color:rgba(255, 255, 255, 0.336);
+}
+.head_part > h2{
+    color: white;
+    
+}
+.score_details_part{
+    color: rgba(255, 255, 255, 0.644);
+    margin-top: .7rem;
+    text-align: center;
+}
+
+/* Summary_part */
+
+.summary_part{
+    font-family: var(--PRIMARYFONT);
+    background-color: rgb(255, 255, 255);
+    padding: 1rem 1.8rem 1rem 1.8rem;
+    z-index: 1;
+    position: relative;
+     padding-top: 27rem;
+
+   
+    
+}
+.summary_part > h1 { 
+    color: rgba(0, 0, 0, 0.767);
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+.Reaction_part,.Memory_part,.Verbal_part,.Visual_part{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 1.5em;
+}
+.Reaction_image_part,.Memory_image_part,.Verbal_image_part,.Visual_image_part{
+    display: flex;
+    gap: .5rem;
+}
+.Reaction_image_part > p{
+    color: var(--PRIMARYCOLOR1);
+}
+.Memory_image_part > p{
+    color: var(--PRIMARYCOLOR2);
+}
+.Verbal_image_part > p{
+    color: var(--PRIMARYCOLOR3);
+}
+.Visual_image_part > p{
+    color: var(--PRIMARYCOLOR4);
+}
+.Reaction_part{
+    background-color:rgba(255, 0, 0, 0.089);
+    padding: 1rem 1.5rem;
+    border-radius: 15px;
+}
+.Memory_part{
+    background-color:rgba(255, 255, 0, 0.089);
+    padding: 1rem 1.5rem;
+    border-radius: 15px;
+}
+.Verbal_part{
+    background-color:rgba(0, 255, 200, 0.089);
+    padding: 1rem 1.5rem;
+    border-radius: 15px;
+}
+.Visual_part{
+    background-color:rgba(0, 0, 255, 0.089);
+    padding: 1rem 1.5rem;
+    border-radius: 15px;
+}
+.mark_part{
+    font-weight: 600;
+    color: black;
+}
+.mark_part > span{
+    color: rgba(0, 0, 0, 0.438);
+}
+
+button{
+    background-color: hsl(224, 30%, 27%);
+    padding: 1rem;
+    width: 100%;
+    border-radius: 25px;
+    border: none;
+    font-size: 1.1rem;
+    color: white;
+    font-weight: 500;
+    margin-top: 2rem;
+}
+
+/* Media quary */
+
+@media (min-width:565px){
+    body{
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(187, 187, 187);
+    }
+    .container{
+        flex-direction: row;
+    }
+    .summary_part{
+        width: 450px;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+        padding-left: 26rem;
+        padding-top: 0;
+        width: 900px;
+        border-radius: 30px;
+        padding-top: 1rem;
+    }
+    .Result_part{
+        max-width: 400px;
+        border-radius: 30px;
+        right:10;
+        padding-bottom: 5.6rem;
+        padding-top: 3rem;
+    }
+} 
+@media (min-width:768px){
+    .container{
+        width: 800px;
+    }
+} {
+    
+}
+    
